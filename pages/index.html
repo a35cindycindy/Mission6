@@ -11,9 +11,9 @@
     <%- include('./layout/header'); -%>
 
     <main class="bg-natural-95">
-      <div class="container py-7">
-        <div class="row justify-content-center">
-          <div class="col-10">
+      <div class="container py-7  flex-nowrap">
+        <div class="row justify-content-center ">
+          <div class="col-12 col-md-10">
             <ul class="nav nav-pills mb-5 justify-content-center tab-btn-bg" id="pills-tab" role="tablist">
               <li class="nav-item me-4" role="presentation">
                 <button class="nav-link border active" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info" type="button" role="tab" aria-controls="pills-info" aria-selected="true">
@@ -35,7 +35,89 @@
             </ul>
             <div class="tab-content rounded-3 bg-white p-6 shadow" id="pills-tabContent">
               <!-- 個人資料 -->
-              <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab" tabindex="0">個人資料</div>
+              <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab" tabindex="0">
+                <form>
+                  <!--  個人資料 -->
+                  <div class="d-md-flex gap-4  pb-5 mb-5 d-block">
+                    <!-- 左邊 -->
+                    <div class="flex-shrink-0 side-with">
+                      <h2 class="fs-4 mb-3">個人資料</h2>
+                    </div>
+                    <!-- 右邊 -->
+                    <div class="flex-grow-1">
+                      <div class="d-flex align-items-end mb-4">
+                       <img src="/assets/images/avatar.png" alt="" class="info-img rounded-circle border me-2">
+                        <label for="upload" class="btn border "><span class="material-icons-outlined me-1 align-bottom">file_upload</span>更新頭貼</label>
+                        <input type="file" name="upload" id="upload" class="d-none">
+                      </div>
+                      <!-- 姓名 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="demo" placeholder="姓名" value="Mokumaru">
+                          <label for="demo">姓名</label>
+                        </div>
+                      </div> 
+                      <!-- 性別 -->
+                      <div class="mb-4">
+                        <p class="mb-2">性別</p>
+                        <div class="px-2">
+                          <div class="form-check form-check-inline me-4 mb-2">
+                            <input class="form-check-input" type="radio" name="inlineRadioGender" id="gender1" value="gender1">
+                            <label class="form-check-label" for="gender1">女性</label>
+                          </div>
+                          <div class="form-check form-check-inline me-4">
+                            <input class="form-check-input" type="radio" name="inlineRadioGender" id="gender2" value="gender2">
+                            <label class="form-check-label" for="gender2">男性</label>
+                          </div>
+                          <div class="form-check form-check-inline me-4">
+                            <input class="form-check-input" type="radio" name="inlineRadioGender" id="gender3" value="gender3">
+                            <label class="form-check-label" for="gender3">不願透露</label>
+                          </div>                        
+                        </div>
+                      </div>                      
+                      <!-- 生日 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="text" class="form-control text-natural-50" id="demo" placeholder="生日" value="2000/01/10">
+                          <label for="demo">生日</label>
+                        </div>
+                      </div>
+                      <!-- 密碼 -->
+                       <div class="mb-4">
+                          <p class="mb-2">性別</p>
+                          <button type="button" class="btn border me-4">修改密碼<span class="material-icons-outlined me-1 align-bottom">chevron_right</span></button>
+                       </div>
+                      <!-- 信箱 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="text" class="form-control text-natural-50" id="demo" placeholder="信箱" value="mokumaru@mail.com">
+                          <label for="demo">信箱</label>
+                          <p class="text-natural-50">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
+                        </div>
+                      </div>
+                      <!-- 聯絡電話 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="text" class="form-control text-natural-50" id="demo" placeholder="聯絡電話" value="09-1234-5678">
+                          <label for="demo">聯絡電話</label>
+                        </div>
+                      </div>
+                       <!-- 通訊地址 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input type="text" class="form-control text-natural-50" id="demo" placeholder="通訊地址" value="高雄市三民區九如一路 87 號">
+                          <label for="demo">通訊地址</label>
+                        </div>
+                      </div>              
+                    </div>
+                  </div>
+                    <!-- 儲存 -->
+                  <div class="d-flex justify-content-center">
+                    <button type="button" class="btn border me-4">重新填寫<span class="material-icons-outlined me-1 align-bottom">chevron_right</span></button>
+                    <button type="button" class="btn btn-dark">儲存更新<span class="material-icons-outlined me-1 align-bottom">chevron_right</span></button>                    
+                  </div>
+                 </form>
+              </div>
               <!-- 預約紀錄 -->
               <div class="tab-pane fade" id="pills-record" role="tabpanel" aria-labelledby="pills-record-tab" tabindex="0">
                 <h2 class="fs-4 mb-4">預約紀錄</h2>
