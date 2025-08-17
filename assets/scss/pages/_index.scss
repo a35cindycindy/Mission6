@@ -6,3 +6,40 @@
     width: 120px;
     height: 120px;
 }
+
+.nav-link-md {
+  padding: 12px 12px;
+
+  @media (min-width: 576px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .btn-md-save {
+    width: 303px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .d-flex-jcsb {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .table-mobile td,
+  .table-mobile th{
+    padding: 0px;
+  }
+  .table-mb-p {
+    padding: 10px 8px;
+  }
+}
+

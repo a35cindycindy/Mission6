@@ -10,3 +10,27 @@ $utilities: map-merge(
       ),
   )
 );
+
+
+@media (max-width: 576px) {
+  .text_md {
+    font-size: 14px;
+  }
+  .text-2xl{
+    font-size: 20px;
+  }
+  .icon-20{
+      font-size: 20px;   
+      line-height: 20px; 
+  }
+}
+
+
+
+@media (min-width: 576px) {
+  .btn-md {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
